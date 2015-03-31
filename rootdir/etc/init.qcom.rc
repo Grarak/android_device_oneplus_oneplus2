@@ -43,25 +43,9 @@ on init
     mkdir /persist 0771 system system
     chmod 0644 /proc/cmdline
 
-    # See storage config details at http://source.android.com/devices/tech/storage/
-    mkdir /mnt/shell/emulated 0700 shell shell
-    mkdir /storage/emulated 0555 root root
-
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-    mkdir /storage/usbdisk 0700 root root
-
-    export EXTERNAL_STORAGE /storage/emulated/legacy
-    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
-    export EMULATED_STORAGE_TARGET /storage/emulated
-    export SECONDARY_STORAGE /storage/usbdisk
-
     # Support legacy paths
-    symlink /storage/emulated/legacy /sdcard
-    symlink /storage/emulated/legacy /mnt/sdcard
-    symlink /storage/emulated/legacy /storage/sdcard0
-    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
-    symlink /storage/usbdisk /usbdisk
-    symlink /storage/usbdisk /mnt/usbdisk
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
     chown system system /sys/bus/spi/drivers/fpc1020/spi12.0/diag/spi_register
     chown system system /sys/bus/spi/drivers/fpc1020/spi12.0/diag/spi_data
