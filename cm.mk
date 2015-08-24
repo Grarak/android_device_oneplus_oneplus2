@@ -15,7 +15,7 @@
 $(call inherit-product, device/oneplus/plutonium/full_plutonium.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/common_full_phone.mk)
 
 # Inherit plutonium-specific vendor tree
 $(call inherit-product-if-exists, vendor/oneplus/plutonium/plutonium-vendor.mk)
