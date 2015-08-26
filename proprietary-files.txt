@@ -104,7 +104,6 @@ lib/libparam.so
 lib/libqomx_core.so
 lib/librmnetctl.so
 lib64/hw/lights.msm8994.so
-lib64/hw/sensors.hal.tof.so
 lib64/libopcamera.so
 lib64/libopcameralib.so
 lib64/libparam.so
