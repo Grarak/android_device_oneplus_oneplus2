@@ -13,6 +13,12 @@
     },
     {
         "remote":      "github",
+        "repository":  "CyanogenMod/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "target_path": "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+        "revision":    "cm-12.1"
+    },
+    {
+        "remote":      "github",
         "repository":  "Grarak/proprietary_vendor_oneplus",
         "target_path": "vendor/oneplus",
         "revision":    "cm-12.1"
