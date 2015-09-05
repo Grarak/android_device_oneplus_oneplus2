@@ -14,6 +14,7 @@ persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
+ro.telephony.ril_class=OppoRIL
 DEVICE_PROVISIONED=1
 ro.telephony.default_network=9
 ro.rf_version=TDD_FDD_Ch_All
