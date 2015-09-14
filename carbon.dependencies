@@ -1,0 +1,26 @@
+[
+  {
+    "remote": "cm",
+    "repository": "Cyanogenmod/android_device_oppo_common",
+    "target_path": "device/oppo/common",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "cm",
+    "repository": "Cyanogenmod/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "gh",
+    "repository": "Grarak/android_kernel_oneplus_msm8994",
+    "target_path": "kernel/oneplus/msm8994",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "td",
+    "repository": "proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "revision": "cm-12.1"
+  }
+]
