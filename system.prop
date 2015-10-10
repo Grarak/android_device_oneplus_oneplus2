@@ -99,8 +99,5 @@ ro.qc.sdk.sensors.gestures=true
 # Time services
 persist.timed.enable=true
 
-# USB
-persist.sys.usb.config=mtp
-
 # Wifi
 wifi.interface=wlan0
