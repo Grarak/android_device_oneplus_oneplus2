@@ -146,6 +146,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+         <add-resource type="integer" name="config_deviceHardwareKeys"> </add-resource>
     <integer name="config_deviceHardwareKeys">83</integer>
 
     <!-- If this is true, the screen will fade off. -->
@@ -291,6 +292,11 @@
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
+     <!-- Performance profiles -->
+     <add-resource type="string" name="config_perf_profile_prop"> </add-resource>
+    <string name="config_perf_profile_prop">powerhal</string>
+    <add-resource type="string" name="config_perf_profile_default_entry"> </add-resource>
+    <string name="config_perf_profile_default_entry">1</string>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
          rather than the uevent framework. -->
