@@ -143,8 +143,8 @@ PRODUCT_PACKAGES += \
     setup_fs
 
 # GPS
-PRODUCT_PACKAGES += \
-    gps.msm8994 \
+#PRODUCT_PACKAGES += \
+#    gps.msm8994 \
     flp.conf \
     gps.conf \
     izat.conf \
