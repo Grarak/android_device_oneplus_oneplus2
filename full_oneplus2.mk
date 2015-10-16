@@ -26,3 +26,8 @@ PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := oneplus2
 PRODUCT_BRAND := OnePlus
+
+# Overrides build.prop
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=oneplus2 \
+    BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:5.1.1/LMY47V/1436933040:user/release-keys \
+    PRIVATE_BUILD_DESC="OnePlus2-user 5.1.1 LMY47V 17 dev-keys"
