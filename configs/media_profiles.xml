@@ -469,18 +469,6 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-
-      <Video codec="h264"
-             bitRate="14000000"
-             width="1280"
-             height="720"
-             frameRate="30" />
-
-      <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
-<!-- VENDOR_EDIT zoufeng@framework, 2015/01/26, Modify for
       <Video codec="h264"
              bitRate="20000000"
              width="1920"
@@ -491,7 +479,6 @@
              bitRate="156000"
              sampleRate="48000"
              channels="2" />
--->
     </EncoderProfile>
 
     <EncoderProfile quality="qvga" fileFormat="mp4" duration="60">
@@ -545,7 +532,7 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- VENDOR_EDIT zoufeng@framework, 2015/01/26, Modify for 
+
     <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -558,7 +545,7 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
--->
+
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -613,29 +600,17 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-         <Video codec="h264"
-             bitRate="8000000"
-             width="1280"
-             height="720"
-             frameRate="30" />
-
-      <!-- audio setting is ignored -->
-      <Audio codec="aac"
-             bitRate="96000"
-             sampleRate="48000"
-             channels="1" />
-<!-- VENDOR_EDIT zoufeng@framework, 2015/01/26, Modify for
       <Video codec="h264"
              bitRate="20000000"
              width="1920"
              height="1080"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
              channels="2" />
--->
     </EncoderProfile>
 
     <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
@@ -763,7 +738,7 @@
              sampleRate="48000"
              channels="1" />
     </EncoderProfile>
-<!-- VENDOR_EDIT zoufeng@framework, 2015/01/26, Modify for cts
+
     <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -771,12 +746,13 @@
              height="1080"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
--->
+
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />
@@ -899,3 +875,4 @@
     -->
     <ExportVideoProfile name="m4v" profile= "1" level="128"/>
 </MediaSettings>
+
