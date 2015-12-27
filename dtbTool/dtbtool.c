@@ -830,21 +830,22 @@ int main(int argc, char **argv)
        extract "qcom,msm-id" parameter
      */
     while ((dp = readdir(dir)) != NULL) {
-        if ((dp->d_type == DT_REG)) {
+
+        flen = strlen(input_dir) + strlen(dp->d_name) + 1;
+        filename = (char *)malloc(flen);
+        if (!filename) {
+            log_err("Out of memory\n");
+            rc = RC_ERROR;
+            break;
+        }
+        strncpy(filename, input_dir, flen);
+        strncat(filename, dp->d_name, flen);
+        
+    	if (stat(filename, &st) == 0 && S_ISREG(st.st_mode)) {
             flen = strlen(dp->d_name);
             if ((flen > 4) &&
                 (strncmp(&dp->d_name[flen-4], ".dtb", 4) == 0)) {
                 log_info("Found file: %s ... \n", dp->d_name);
-
-                flen = strlen(input_dir) + strlen(dp->d_name) + 1;
-                filename = (char *)malloc(flen);
-                if (!filename) {
-                    log_err("Out of memory\n");
-                    rc = RC_ERROR;
-                    break;
-                }
-                strncpy(filename, input_dir, flen);
-                strncat(filename, dp->d_name, flen);
 
                 /* To identify the version number */
                 msmversion = GetVersionInfo(filename);
