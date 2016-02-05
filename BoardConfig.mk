@@ -22,6 +22,8 @@
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
+DEVICE_PATH : = device/oneplus/oneplus2
+
 BOARD_VENDOR := oneplus
 
 # Bootloader
@@ -85,14 +87,14 @@ USE_CUSTOM_AUDIO_POLICY := 1
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_HAS_QCA_BT_ROME := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/oneplus2/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/oneplus/oneplus2/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(DEVICE_PATH)/charger/images
 
 # Font
 EXTENDED_FONT_FOOTPRINT := true
@@ -115,13 +117,13 @@ HAVE_ADRENO_SOURCE:= false
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/oneplus/oneplus2/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_LIBINIT_DEFINES_FILE := device/oneplus/oneplus2/init/init_oneplus2.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_oneplus2.cpp
 
 # Keymaster app checking
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
@@ -169,7 +171,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/oneplus2/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
@@ -180,7 +182,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    device/oneplus/oneplus2/cmhw \
+    $(DEVICE_PATH)/cmhw \
     hardware/cyanogen/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
