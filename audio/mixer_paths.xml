@@ -1090,6 +1090,13 @@
     </path>
 
    <!-- #endif VENDOR_EDIT-->
+
+    <path name="play-fm speaker">
+        <ctl name="PRI MI2S LOOPBACK Volume" value="1" />
+        <ctl name="QUAT_MI2S_RX_DL_HL_FM Switch" value="1" />
+        <ctl name="QUAT_MI2S_RX Port Mixer PRI_MI2S_TX" value="1" />
+        <ctl name="QUAT_MI2S_RX_DL_HL Switch" value="1" />
+    </path>
    
     <path name="voice-call hdmi">
         <ctl name="HDMI_RX_Voice Mixer CSVoice" value="1" />
