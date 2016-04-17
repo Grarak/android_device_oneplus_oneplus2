@@ -117,3 +117,30 @@ persist.timed.enable=true
 
 # Video
 vidc.enc.dcvs.extra-buff-count=2
+
+# Tweaks for better responsiveness, performance, network, video, JPEG quality and RAW support for camera
+ro.ril.hsxpa=3
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+dalvik.vm.dexopt-flags=o=v,
+video.accelerate.hw=1
+debug.sf.hw=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+ro.product.max_num_touch=10
+ro.product.multi_touch_enabled=true
+ro.min_pointer_dur=1
+windowsmgr.max_events_per_sec=1400
+ro.min.fling_velocity=6400
+ro.max.fling_velocity=12800
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.capture.maxres=13m
+ro.media.panorama.defres=3264x1840
+ro.media.panorama.frameres=1280x720
+ro.camcorder.videoModes=true
+ro.media.enc.hprof.vid.fps=65
+ro.media.enc.jpeg.quality=100
