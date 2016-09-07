@@ -35,28 +35,27 @@
 #include "util.h"
 
 void init_variant_properties() {
-    char device[PROP_VALUE_MAX];
-    char rf_version[PROP_VALUE_MAX];
-    int rc;
 
-    rc = property_get("ro.cm.device", device);
-    if (!rc || strncmp(device, "oneplus2", 8))
+    std::string device = property_get("ro.cm.device");
+    std::string rf_version;
+
+    if (device.compare("oneplus2"))
         return;
 
-    property_get("ro.boot.rf_v1", rf_version);
+    rf_version = property_get("ro.boot.rf_v1");
 
-    if (strstr(rf_version, "14")) {
+    if (rf_version.compare("14") == 0) {
         /* Chinese */
         property_set("ro.product.model", "ONE A2001");
         property_set("ro.rf_version", "TDD_FDD_Ch_All");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.telephony.default_network", "20,20");
-    } else if (strstr(rf_version, "24")) {
+    } else if (rf_version.compare("24") == 0) {
         /* Asia/Europe */
         property_set("ro.product.model", "ONE A2003");
         property_set("ro.rf_version", "TDD_FDD_Eu");
         property_set("ro.telephony.default_network", "9,9");
-    } else if (strstr(rf_version, "34")) {
+    } else if (rf_version.compare("34") == 0) {
         /* America */
         property_set("ro.product.model", "ONE A2005");
         property_set("ro.rf_version", "TDD_FDD_Am");
