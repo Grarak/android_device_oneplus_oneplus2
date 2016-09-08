@@ -20,17 +20,11 @@
 # definition file).
 #
 
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
-
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
 PLATFORM_PATH := device/oneplus/oneplus2
 
 BOARD_VENDOR := oneplus
-
-# Assertions
-TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
@@ -71,9 +65,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
-
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
 # Audio
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -121,7 +112,6 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # Graphics
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_C2D_COMPOSITION := true
@@ -180,10 +170,6 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-CONFIG_EAP_PROXY := qmi
-CONFIG_EAP_PROXY_DUAL_SIM := true
-CONFIG_EAP_PROXY_AKA_PRIME := true
-CONFIG_EAP_PROXY_MSM8994_TARGET := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -198,10 +184,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
-# SELinux
+# Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
