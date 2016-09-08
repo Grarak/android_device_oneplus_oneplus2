@@ -154,6 +154,7 @@ TARGET_NO_RPC := true
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
+BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
