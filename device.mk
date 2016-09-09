@@ -291,4 +291,4 @@ PRODUCT_PACKAGES += \
     hostapd.deny
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
