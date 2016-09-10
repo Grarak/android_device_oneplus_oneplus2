@@ -1,1 +1,1 @@
-# android_device_oneplus_oneplus2
+CM14 FOR OP2
