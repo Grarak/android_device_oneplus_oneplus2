@@ -18,7 +18,7 @@ package org.cyanogenmod.hardware;
 
 import java.io.File;
 
-import org.cyanogenmod.hardware.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 /*
  * Disable capacitive keys
