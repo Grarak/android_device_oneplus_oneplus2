@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8994 \
     sensors.hal.tof \
-    Snap
+    Camera2
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
