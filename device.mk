@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8994 \
     libcamera_shim \
     sensors.hal.tof \
     Camera2
